@@ -29,8 +29,6 @@ Uma build em português brasileiro também está disponível como **v1.1 PT-BR**
 - Tem interface responsiva para celular
 - Permite editar, salvar e baixar arquivos TXT de receita pelo navegador
 - Compartilha receitas offline por QR Code
-- Inclui tela Sobre com easter egg da receita do bolo de Portal
-- Inclui um motivo curto de abertura com clima de celesta/caixinha de música
 
 ## Hardware
 
