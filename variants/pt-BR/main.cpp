@@ -13,7 +13,7 @@
 #define FW_VERSION "v1.1"
 #define RECIPE_DIR "/RECEITAS"
 #define IMPORT_DIR "/IMPORTAR"
-#define BACKUP_FILE "/CYBERCHEF_BACKUP.txt"
+#define BACKUP_FILE "/MISEDECK_BACKUP.txt"
 #define MAX_VISIBLE 3
 
 // Ajuste estes pinos se seu modelo de Cardputer usar pinagem diferente.
@@ -593,7 +593,7 @@ void uiShareQr() {
 Recipe txtToRecipe(String txt) {
   // Versoes antigas abriam FILE_WRITE em modo append. Se isso ocorreu,
   // a ultima copia completa e a versao mais recente da receita.
-  int lastHeader=txt.lastIndexOf("CYBER CHEF RECIPE");
+  int lastHeader=max(txt.lastIndexOf("MISEDECK RECIPE"), txt.lastIndexOf("CYBER CHEF RECIPE"));
   if (lastHeader>0) txt=txt.substring(lastHeader);
   Recipe r; r.id = nowId(); r.name="SEM NOME"; r.category="OUTROS";
   int pos=0; Prep *currentPrep = nullptr; bool inIng=false;
@@ -603,7 +603,7 @@ Recipe txtToRecipe(String txt) {
     if (nl < 0) nl = txt.length();
     String line = txt.substring(pos, nl); line.trim(); pos = nl+1;
     if (!line.length()) continue;
-    if (line == "CYBER CHEF RECIPE") { sawHeader=true; continue; }
+    if (line == "MISEDECK RECIPE" || line == "CYBER CHEF RECIPE") { sawHeader=true; continue; }
     if (line == "[INGREDIENTES]") { inIng=true; currentPrep=nullptr; continue; }
     if (line == "[PREPARO]") { r.composite=true; r.preps.push_back(Prep()); currentPrep=&r.preps.back(); inIng=false; continue; }
     if (line.indexOf('|') > 0) {
@@ -877,8 +877,8 @@ bool bootPause(int ms, unsigned long &lastNote, int &noteStep) {
   return false;
 }
 void showBoot() {
-  String title = "Cyber_Chef";
-  String slogan = "\"O seu canivete suico digital gastronomico\"";
+  String title = "MiseDeck";
+  String slogan = "\"Mise en place de bolso para o Cardputer\"";
   randomSeed(millis() + batteryMv + recipes.size());
   unsigned long bootNoteLast = 0;
   int bootNoteStep = 0;
@@ -913,7 +913,7 @@ void showBoot() {
   return;
 #if 0
   String lines[] = {
-    "CYBER CHEF BOOT\n--------------------\n",
+    "MISEDECK BOOT\n--------------------\n",
     "INIT DISPLAY....OK\n",
     "MAP TECLADO.....OK\n",
     "MOUNT SD CARD...OK\n",
@@ -931,7 +931,7 @@ void showBoot() {
   String typed="";
   for (int i=0;i<=slogan.length();i++) {
     typed = slogan.substring(0,i);
-    drawText(" [ CYBER CHEF " + String(FW_VERSION) + " ]\n--------------------\n" + typed + "_\n--------------------");
+    drawText(" [ MISEDECK " + String(FW_VERSION) + " ]\n--------------------\n" + typed + "_\n--------------------");
     bootDelay(58);
     if (state==ST_MAIN) return;
   }
@@ -1004,7 +1004,7 @@ void render() {
   messageUntil = 0;
   String out;
   switch(state) {
-    case ST_MAIN: uiMenu("CYBER CHEF " + String(FW_VERSION), {"RECEITAS","FERRAMENTAS","WIFI","SISTEMA"}, ";/ . MOVE  / ENTRA  OK ENTRA"); return;
+    case ST_MAIN: uiMenu("MISEDECK " + String(FW_VERSION), {"RECEITAS","FERRAMENTAS","WIFI","SISTEMA"}, ";/ . MOVE  / ENTRA  OK ENTRA"); return;
     case ST_RECEITAS: uiMenu("RECEITAS", {"FAVORITAS","BIBLIOTECA","NOVA","QUICK"}); return;
     case ST_CATEGORIES: {
       std::vector<String> it; for(int i=0;i<CAT_COUNT;i++) it.push_back(cats[i]);
@@ -1162,7 +1162,7 @@ void render() {
     case ST_WIFI_STATUS: {
       String body;
       if (WiFi.status()==WL_CONNECTED) {
-        body = "CONECTADO\nRede: " + wifiSsid + "\nIP: " + wifiIp() + "\n\nAcesse:\ncyberchef.local\nou " + wifiIp();
+        body = "CONECTADO\nRede: " + wifiSsid + "\nIP: " + wifiIp() + "\n\nAcesse:\nmisedeck.local\nou " + wifiIp();
       } else {
         body = "DESCONECTADO\n\nConfigure rede/senha\ne aperte conectar.";
       }
@@ -1174,7 +1174,7 @@ void render() {
     case ST_BATTERY: uiBatteryScreen(); return;
     case ST_ABOUT: {
       uiFrame("SOBRE", "` VOLTA");
-      drawCenteredText("CYBER CHEF", 22, 1, AMBER);
+      drawCenteredText("MISEDECK", 22, 1, AMBER);
       drawCenteredText("Idealizado por Andre", 38, 1, AMBER);
       drawCenteredText("Fuentes  @anfuentz", 50, 1, AMBER_DIM);
       drawCenteredText("Vibecodeado por Codex", 66, 1, AMBER);
@@ -1305,19 +1305,19 @@ String wifiIp() {
   return WiFi.localIP().toString();
 }
 void loadWifiConfig() {
-  prefs.begin("cyberchef", true);
+  prefs.begin("misedeck", true);
   wifiSsid = prefs.getString("wifi_ssid", "");
   wifiPass = prefs.getString("wifi_pass", "");
   prefs.end();
 }
 void saveWifiConfig() {
-  prefs.begin("cyberchef", false);
+  prefs.begin("misedeck", false);
   prefs.putString("wifi_ssid", wifiSsid);
   prefs.putString("wifi_pass", wifiPass);
   prefs.end();
 }
 void loadSoundConfig() {
-  prefs.begin("cyberchef", true);
+  prefs.begin("misedeck", true);
   soundOn = prefs.getBool("sound_on", true);
   soundVolume = prefs.getInt("sound_vol", 6);
   prefs.end();
@@ -1329,7 +1329,7 @@ void loadSoundConfig() {
 void saveSoundConfig() {
   if (soundVolume < 0) soundVolume = 0;
   if (soundVolume > 10) soundVolume = 10;
-  prefs.begin("cyberchef", false);
+  prefs.begin("misedeck", false);
   prefs.putBool("sound_on", soundOn);
   prefs.putInt("sound_vol", soundVolume);
   prefs.end();
@@ -1385,7 +1385,7 @@ String recipeCard(int idx) {
 }
 String portalHtml() {
   String html = "<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>";
-  html += "<title>Cyber Chef</title><style>";
+  html += "<title>MiseDeck</title><style>";
   html += ":root{--bg:#050300;--panel:#120900;--amber:#ffb000;--dim:#9b6a20;--line:#5d3a00;--hot:#ffd36a}";
   html += "*{box-sizing:border-box}html{font-size:16px}body{margin:0;background:radial-gradient(circle at top,#1b0d00 0,#050300 45%,#000 100%);color:var(--amber);font-family:ui-monospace,Consolas,monospace;-webkit-text-size-adjust:100%}";
   html += ".wrap{max-width:1100px;margin:auto;padding:22px}.top{display:flex;gap:12px;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--line);padding-bottom:14px}";
@@ -1399,7 +1399,7 @@ String portalHtml() {
   html += ".scale{border:1px solid var(--line);padding:12px;margin:12px 0;background:#0b0500}.scale input{background:#050300;border:1px solid var(--amber);color:var(--hot);padding:9px;font:inherit;width:150px}.calc{margin-top:12px}.calc table{width:100%;border-collapse:collapse}.calc td,.calc th{border-bottom:1px solid var(--line);padding:7px;text-align:left}.calc h4{margin:14px 0 6px}";
   html += ".editor{display:none;border:1px solid var(--line);padding:12px;margin:12px 0;background:#070300}.editor.on{display:block}.editor textarea{width:100%;min-height:330px;background:#020100;color:var(--hot);border:1px solid var(--amber);font:14px ui-monospace,Consolas,monospace;padding:10px}.tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}";
   html += "@media(max-width:650px){html{font-size:18px}.wrap{padding:14px}.top,.recipe,.topright,.topstatus{display:block}.topright{align-items:stretch}.slogan{font-size:14px;line-height:1.35}.status{text-align:left;margin-top:8px;font-size:13px}.syncTop{width:100%;margin-top:8px}.createbar{display:grid;grid-template-columns:1fr;gap:8px;margin-top:8px}.createbar button,.syncTop{font-size:16px;padding:13px}.tabs{position:sticky;top:0;z-index:5;background:rgba(5,3,0,.96);margin:12px -14px 14px;padding:10px 14px;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;border-bottom:1px solid var(--line)}.tab{flex:0 0 auto;padding:12px 14px;font-size:15px}.panel h2{font-size:20px;margin:12px 0}.recipe{padding:15px;margin:12px 0}.recipe h3{font-size:22px;line-height:1.2}.recipe .dim{font-size:14px;line-height:1.35}.actions{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}.actions button,.actions .btn,.tools button,.tools .btn{width:100%;text-align:center;padding:13px}.modal{padding:0;align-items:stretch}.modalbox{width:100%;height:100vh;max-height:none;margin:0;border:0;padding:14px}.modalbar{position:sticky;top:0;background:#120900;z-index:6}.modalbar button{padding:12px 14px}#mtitle{font-size:20px;line-height:1.2}pre{font-size:18px;line-height:1.5;overflow:auto}.scale{padding:12px}.scale p{line-height:1.45}.scale input{width:100%;font-size:18px;margin:6px 0}.scale button{width:100%;margin-top:8px}.calc{overflow-x:auto}.calc table{min-width:440px}.editor textarea{min-height:55vh;font-size:16px;line-height:1.45}.backupFoot{text-align:center}.backupFoot .btn{display:block;width:100%}}";
-  html += "</style></head><body><div class='wrap'><header class='top'><div><h1>CYBER CHEF</h1><div class='slogan'><em>\"O seu canivete suico digital gastronomico\"</em></div></div>";
+  html += "</style></head><body><div class='wrap'><header class='top'><div><h1>MISEDECK</h1><div class='slogan'><em>\"Mise en place de bolso para o Cardputer\"</em></div></div>";
   html += "<div class='topright'><div class='topstatus'><button class='syncTop' onclick='syncPortal()'>SYNC</button><div class='status'>IP " + htmlEscape(wifiIp()) + "<br>FW " + String(FW_VERSION) + "<br>" + String(recipes.size()) + " receitas</div></div>";
   html += "<div class='createbar'><button class='create' onclick='newRecipe(false)'>+ NOVA SIMPLES</button><button class='create' onclick='newRecipe(true)'>+ NOVA COMPOSTA</button></div></div></header>";
   html += "<nav class='tabs'>";
@@ -1428,7 +1428,7 @@ String portalHtml() {
   html += "<script>function showTab(n){document.querySelectorAll('.catTab').forEach((b,i)=>b.classList.toggle('active',i===n));document.querySelectorAll('.panel').forEach((p,i)=>p.classList.toggle('active',i===n));}";
   html += "function syncPortal(){location.href='/?sync='+Date.now();}";
   html += "let currentTxt='',currentId=-1,scaleReady=false;function esc(s){return String(s).replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[m]));}";
-  html += "function parseRecipe(t){let r={name:'RECEITA',total:0,type:'SIMPLES',ings:[],preps:[]},p=null,seen=false;for(let raw of t.split(/\\r?\\n/)){let line=raw.trim();if(!line)continue;if(line==='CYBER CHEF RECIPE'){seen=true;continue;}if(line==='[INGREDIENTES]'){p=null;seen=true;continue;}if(line==='[PREPARO]'){p={name:'PREPARO',total:0,ings:[]};r.preps.push(p);seen=true;continue;}if(line.includes('|')){let a=line.split('|');let ing={name:a[0],w:parseFloat((a[1]||'0').replace(',','.'))||0};if(p)p.ings.push(ing);else r.ings.push(ing);seen=true;continue;}let ix=line.indexOf(':');if(ix<0){if(!seen)r.name=line;seen=true;continue;}let k=line.split(':')[0],v=line.substring(ix+1).trim();if(k==='NOME'&&!p)r.name=v;if(k==='TIPO')r.type=v;if(k==='TOTAL'){if(p)p.total=parseFloat(v.replace(',','.'))||0;else r.total=parseFloat(v.replace(',','.'))||0;}if(k==='NOME'&&p)p.name=v;seen=true;}return r;}";
+  html += "function parseRecipe(t){let r={name:'RECEITA',total:0,type:'SIMPLES',ings:[],preps:[]},p=null,seen=false;for(let raw of t.split(/\\r?\\n/)){let line=raw.trim();if(!line)continue;if(line==='MISEDECK RECIPE'||line==='CYBER CHEF RECIPE'){seen=true;continue;}if(line==='[INGREDIENTES]'){p=null;seen=true;continue;}if(line==='[PREPARO]'){p={name:'PREPARO',total:0,ings:[]};r.preps.push(p);seen=true;continue;}if(line.includes('|')){let a=line.split('|');let ing={name:a[0],w:parseFloat((a[1]||'0').replace(',','.'))||0};if(p)p.ings.push(ing);else r.ings.push(ing);seen=true;continue;}let ix=line.indexOf(':');if(ix<0){if(!seen)r.name=line;seen=true;continue;}let k=line.split(':')[0],v=line.substring(ix+1).trim();if(k==='NOME'&&!p)r.name=v;if(k==='TIPO')r.type=v;if(k==='TOTAL'){if(p)p.total=parseFloat(v.replace(',','.'))||0;else r.total=parseFloat(v.replace(',','.'))||0;}if(k==='NOME'&&p)p.name=v;seen=true;}return r;}";
   html += "function openRecipe(id){currentId=id;scaleReady=false;currentTxt=document.getElementById('txt'+id).textContent;let r=parseRecipe(currentTxt);document.getElementById('mtext').textContent=currentTxt;document.getElementById('mdown').href='/txt?id='+id;document.getElementById('mtitle').textContent=r.name||'RECEITA';document.getElementById('baseTotal').textContent=(r.total||0).toFixed(1);document.getElementById('newTotal').value=r.total||'';document.getElementById('calc').innerHTML='';document.getElementById('saveScale').disabled=true;document.getElementById('editor').classList.remove('on');document.getElementById('modal').classList.add('on');document.querySelector('.modalbox').scrollTop=0;}";
   html += "function row(n,w,p){return '<tr><td>'+esc(n)+'</td><td>'+w.toFixed(1)+' g</td><td>'+p+'%</td></tr>'}";
   html += "function recalcRecipe(){let r=parseRecipe(currentTxt),nt=parseFloat(document.getElementById('newTotal').value)||0,out='';scaleReady=false;document.getElementById('saveScale').disabled=true;if(!nt||!r.total){document.getElementById('calc').innerHTML='<p class=dim>Informe um total valido.</p>';return;}let f=nt/r.total;if(r.preps.length){out+='<h4>TOTAL NOVO '+nt.toFixed(1)+' g</h4>';for(let p of r.preps){let pt=(p.total||p.ings.reduce((s,i)=>s+i.w,0))*f;let base=p.total||p.ings.reduce((s,i)=>s+i.w,0)||1;out+='<h4>'+esc(p.name)+' // '+pt.toFixed(1)+' g</h4><table><tr><th>Ingrediente</th><th>Peso</th><th>%</th></tr>';for(let i of p.ings)out+=row(i.name,i.w*f,Math.round(i.w/base*100));out+='</table>';}}else{let base=r.ings.reduce((s,i)=>s+i.w,0)||r.total||1;out+='<h4>TOTAL NOVO '+nt.toFixed(1)+' g</h4><table><tr><th>Ingrediente</th><th>Peso</th><th>%</th></tr>';for(let i of r.ings)out+=row(i.name,i.w*nt/base,Math.round(i.w/base*100));out+='</table>';}document.getElementById('calc').innerHTML=out;scaleReady=true;document.getElementById('saveScale').disabled=false;}";
@@ -1451,7 +1451,7 @@ void startPortalServer() {
       webServer.send(200, "text/plain; charset=utf-8", recipeToTxt(recipes[id]));
     });
     webServer.on("/backup", [](){
-      webServer.sendHeader("Content-Disposition", "attachment; filename=\"CYBERCHEF_BACKUP.txt\"");
+      webServer.sendHeader("Content-Disposition", "attachment; filename=\"MISEDECK_BACKUP.txt\"");
       webServer.send(200, "text/plain; charset=utf-8", backupTxt());
     });
     webServer.on("/scale", HTTP_POST, [](){
@@ -1493,7 +1493,7 @@ void startPortalServer() {
     webStarted = true;
   }
   if (!mdnsStarted) {
-    mdnsStarted = MDNS.begin("cyberchef");
+    mdnsStarted = MDNS.begin("misedeck");
   }
 }
 void stopPortalServer() {
