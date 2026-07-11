@@ -10,16 +10,16 @@ Keep it practical and charming: tiny cyberdeck, real kitchen use, open-source pr
 
 ### 1. Hook — 5 seconds
 
-Show the Cardputer booting into Cyber Chef.
+Show the Cardputer booting into MiseDeck.
 
 Voiceover:
 
-> This is Cyber Chef, a tiny cyberdeck-style kitchen tool running on the M5Stack Cardputer.
+> This is MiseDeck, a tiny cyberdeck-style kitchen tool running on the M5Stack Cardputer.
 
 On-screen caption:
 
 ```text
-Cyber Chef
+MiseDeck
 M5Stack Cardputer kitchen firmware
 ```
 
@@ -50,7 +50,7 @@ Change the total weight and show ingredient weights recalculating.
 
 Voiceover:
 
-> The main feature is proportional scaling. Change the total recipe weight and Cyber Chef recalculates every ingredient.
+> The main feature is proportional scaling. Change the total recipe weight and MiseDeck recalculates every ingredient.
 
 ### 5. Create or edit — 20 seconds
 
@@ -74,7 +74,7 @@ Connect Wi-Fi and open the portal on a phone.
 
 Show:
 
-- `cyberchef.local` or IP
+- `misedeck.local` or IP
 - mobile layout
 - category tabs
 - recipe modal
@@ -91,7 +91,7 @@ Show QR on Cardputer and scan with phone.
 
 Voiceover:
 
-> For offline sharing, Cyber Chef can generate a QR code with a compact text version of the recipe.
+> For offline sharing, MiseDeck can generate a QR code with a compact text version of the recipe.
 
 ### 9. Easter egg — 10 seconds
 
@@ -107,7 +107,7 @@ Show GitHub page or final Cardputer shot.
 
 Voiceover:
 
-> Cyber Chef is open-source. The first release is on GitHub, and feedback, forks, and weird kitchen ideas are welcome.
+> MiseDeck is open-source. The first release is on GitHub, and feedback, forks, and weird kitchen ideas are welcome.
 
 On-screen caption:
 

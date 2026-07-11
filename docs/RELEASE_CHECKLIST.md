@@ -38,7 +38,7 @@ README.pt-BR.md
 CHANGELOG.md
 LICENSE
 platformio.ini
-CyberChef_Cardputer_v11.ino
+MiseDeck_Cardputer_v11.ino
 chef_splash.h
 assets/
 src/
@@ -58,4 +58,4 @@ Avoid publishing:
 
 ## License decision
 
-Cyber Chef uses the MIT License.
+MiseDeck uses the MIT License.

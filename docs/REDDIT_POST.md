@@ -2,11 +2,11 @@
 
 ## Suggested title
 
-I made Cyber Chef: a tiny cyberdeck-style kitchen firmware for the M5Stack Cardputer
+I made MiseDeck: a tiny cyberdeck-style kitchen firmware for the M5Stack Cardputer
 
 ## Short post
 
-Hey everyone! I’ve been building a firmware project for the M5Stack Cardputer called **Cyber Chef**.
+Hey everyone! I’ve been building a firmware project for the M5Stack Cardputer called **MiseDeck**.
 
 It is a small cyberdeck-style kitchen tool: recipe scaling, ingredient lists, timers, unit conversion, a local web portal, mobile browser access, and offline recipe sharing through QR codes.
 
@@ -21,7 +21,7 @@ Main features:
 - quick scaling mode;
 - timer and converter;
 - battery indicator and sound controls;
-- local browser portal at `cyberchef.local` or by IP;
+- local browser portal at `misedeck.local` or by IP;
 - mobile-friendly portal;
 - TXT recipe editing and download;
 - offline QR recipe sharing;
@@ -29,7 +29,7 @@ Main features:
 
 The first `v1.0.0` release is focused on an English firmware experience for easier international sharing. The GitHub docs are available in English and Portuguese, and a PT-BR firmware build / language selector is planned for a future version.
 
-Cyber Chef was idealized by André Fuentes / @anfuentz and vibecoded with Codex.
+MiseDeck was idealized by André Fuentes / @anfuentz and vibecoded with Codex.
 
 GitHub: `ADD LINK HERE`
 
@@ -39,7 +39,7 @@ I would love feedback from other Cardputer, M5Stack, ESP32, and tiny-cyberdeck p
 
 ## Extra-short version
 
-I made **Cyber Chef**, an open-source kitchen utility firmware for the M5Stack Cardputer.
+I made **MiseDeck**, an open-source kitchen utility firmware for the M5Stack Cardputer.
 
 It stores recipes on microSD, scales ingredients by total weight, has a timer/converter, serves a local mobile-friendly web portal, and can share recipes offline through QR codes.
 

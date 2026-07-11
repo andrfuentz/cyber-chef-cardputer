@@ -1,6 +1,6 @@
 # Install and flashing guide
 
-This guide explains how to flash Cyber Chef to an M5Stack Cardputer.
+This guide explains how to flash MiseDeck to an M5Stack Cardputer.
 
 ## Requirements
 
@@ -35,12 +35,12 @@ On macOS/Linux, the port will look different, such as `/dev/ttyACM0` or `/dev/cu
 
 Use FAT32.
 
-Cyber Chef creates/uses:
+MiseDeck creates/uses:
 
 ```text
 /RECEITAS/
 /IMPORTAR/
-/CYBERCHEF_BACKUP.txt
+/MISEDECK_BACKUP.txt
 ```
 
 To import TXT recipes manually:
@@ -50,7 +50,7 @@ To import TXT recipes manually:
 
 ## First boot
 
-On boot, Cyber Chef shows the animated intro screen.
+On boot, MiseDeck shows the animated intro screen.
 
 - Press `OK` to enter immediately.
 - If nothing is pressed, it enters the menu automatically after 15 seconds.
@@ -66,7 +66,7 @@ Main menu > Wi-Fi > Network and Password > Connect
 After connecting, open:
 
 ```text
-http://cyberchef.local
+http://misedeck.local
 ```
 
 If mDNS does not work on your network, use the IP shown on the Cardputer.
@@ -83,7 +83,7 @@ If mDNS does not work on your network, use the IP shown on the Cardputer.
 ### Portal does not open
 
 - Confirm the Cardputer is connected to Wi-Fi.
-- Use the IP address instead of `cyberchef.local`.
+- Use the IP address instead of `misedeck.local`.
 - Make sure your phone/computer is on the same network.
 
 ### Recipes do not save

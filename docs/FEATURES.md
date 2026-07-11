@@ -1,6 +1,6 @@
 # Feature overview
 
-Cyber Chef is designed as a compact kitchen utility firmware for the M5Stack Cardputer.
+MiseDeck is designed as a compact kitchen utility firmware for the M5Stack Cardputer.
 
 ## Recipe library
 
@@ -14,7 +14,7 @@ Cyber Chef is designed as a compact kitchen utility firmware for the M5Stack Car
 
 ## Scaling
 
-Cyber Chef is built around weight-based recipe scaling.
+MiseDeck is built around weight-based recipe scaling.
 
 You can open a recipe and change the total target weight. Ingredient weights are recalculated proportionally.
 
@@ -37,7 +37,7 @@ Example use:
 
 1. Enter several ingredient weights.
 2. Enter a new target total.
-3. Cyber Chef recalculates the new weights.
+3. MiseDeck recalculates the new weights.
 
 ## Timer
 
@@ -65,7 +65,7 @@ System sound options:
 
 ## Battery
 
-Cyber Chef shows a simple battery percentage indicator on screen and includes a battery screen with:
+MiseDeck shows a simple battery percentage indicator on screen and includes a battery screen with:
 
 - Percentage
 - Voltage
@@ -73,10 +73,10 @@ Cyber Chef shows a simple battery percentage indicator on screen and includes a 
 
 ## Wi-Fi portal
 
-When connected to Wi-Fi, Cyber Chef starts a local portal:
+When connected to Wi-Fi, MiseDeck starts a local portal:
 
 ```text
-cyberchef.local
+misedeck.local
 ```
 
 or by IP address.

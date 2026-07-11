@@ -1,13 +1,13 @@
 # Local web portal
 
-Cyber Chef includes a local web portal served directly by the Cardputer.
+MiseDeck includes a local web portal served directly by the Cardputer.
 
 ## Access
 
 Connect the Cardputer to Wi-Fi, then open:
 
 ```text
-http://cyberchef.local
+http://misedeck.local
 ```
 
 If that does not work, use the IP address displayed on the Cardputer.
@@ -35,7 +35,7 @@ The portal is designed to work on phones:
 
 ## Recipe editor
 
-Cyber Chef uses a simple TXT format.
+MiseDeck uses a simple TXT format.
 
 Example:
 
@@ -68,4 +68,4 @@ Use `SYNC` after:
 
 - The portal works only on the same local network.
 - It is not an internet cloud service.
-- `cyberchef.local` depends on mDNS support; IP address is more reliable.
+- `misedeck.local` depends on mDNS support; IP address is more reliable.

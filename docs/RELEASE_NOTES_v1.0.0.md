@@ -1,8 +1,8 @@
-# Cyber Chef v1.0.0 EN / v1.1 PT-BR
+# MiseDeck v1.0.0 EN / v1.1 PT-BR
 
-First public release candidate of Cyber Chef for the M5Stack Cardputer.
+First public release candidate of MiseDeck for the M5Stack Cardputer.
 
-Cyber Chef is a cyberdeck-style kitchen utility firmware focused on recipe scaling, ingredient management, local-first storage, and practical kitchen tools on a tiny device.
+MiseDeck is a cyberdeck-style kitchen utility firmware focused on recipe scaling, ingredient management, local-first storage, and practical kitchen tools on a tiny device.
 
 ## Highlights
 
@@ -16,7 +16,7 @@ Cyber Chef is a cyberdeck-style kitchen utility firmware focused on recipe scali
 - Battery indicator and battery info screen
 - Sound menu with volume control
 - Wi-Fi setup from the device
-- Local browser portal at `cyberchef.local` or by IP
+- Local browser portal at `misedeck.local` or by IP
 - Mobile-friendly portal layout
 - TXT recipe editing and download
 - Offline QR recipe sharing
@@ -51,4 +51,4 @@ See `docs/INSTALL.md` for more details.
 
 ## Credits
 
-Cyber Chef was idealized by André Fuentes / @anfuentz and vibecoded with Codex.
+MiseDeck was idealized by André Fuentes / @anfuentz and vibecoded with Codex.

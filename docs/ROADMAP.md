@@ -1,6 +1,6 @@
 # Roadmap
 
-Cyber Chef should stay focused, fast, useful on the Cardputer, and a little weird in the best cyberdeck way.
+MiseDeck should stay focused, fast, useful on the Cardputer, and a little weird in the best cyberdeck way.
 
 ## v1.0.0
 
@@ -44,7 +44,7 @@ First public release candidate.
 
 ## Philosophy
 
-Cyber Chef should remain:
+MiseDeck should remain:
 
 - offline-first;
 - SD-card friendly;
