@@ -1,12 +1,12 @@
-# Cyber Chef
+# MiseDeck
 
-**A cyberdeck-style kitchen utility firmware for the M5Stack Cardputer.**
+**A pocket mise en place and kitchen utility firmware for the M5Stack Cardputer.**
 
-Cyber Chef turns the M5Stack Cardputer into a compact digital kitchen companion for recipe scaling, ingredient management, timers, offline sharing, and local browser access.
+MiseDeck turns the M5Stack Cardputer into a pocket mise en place for recipe scaling, ingredient management, timers, offline sharing, and local browser access.
 
 > *"we are the music makers and we are the dreamers of dreams"*
 
-Cyber Chef was idealized by **André Fuentes** / **@anfuentz** and vibecoded with **Codex**.
+MiseDeck was idealized by **André Fuentes** / **@anfuentz** and vibecoded with **Codex**.
 
 ## Status
 
@@ -25,7 +25,7 @@ A Portuguese/Brazilian firmware build is also provided as **v1.1 PT-BR**.
 - Offers a quick scaling mode for fast ingredient calculations
 - Includes timer, unit converter, battery view, and sound/volume controls
 - Connects to Wi-Fi from the Cardputer
-- Serves a local browser portal at `cyberchef.local` or the device IP
+- Serves a local browser portal at `misedeck.local` or the device IP
 - Provides a mobile-friendly browser interface
 - Lets you edit, save, and download recipe TXT files
 - Shares compact recipe summaries through offline QR codes
@@ -62,7 +62,7 @@ During text or number editing:
 
 After connecting the Cardputer to Wi-Fi:
 
-1. Open `http://cyberchef.local` in a browser, or use the IP shown on the Cardputer.
+1. Open `http://misedeck.local` in a browser, or use the IP shown on the Cardputer.
 2. Browse recipes by category or the All tab.
 3. Open a recipe to view, scale, edit TXT, save changes, or download it.
 
@@ -70,7 +70,7 @@ The portal runs directly from the Cardputer on your local network. It is not a c
 
 ## Recipe TXT format
 
-Cyber Chef uses a simple, human-readable TXT format:
+MiseDeck uses a simple, human-readable TXT format:
 
 ```txt
 FOCACCIA DO ANDRE
@@ -92,7 +92,7 @@ Composite recipes use `[PREP]` blocks.
 
 ## Offline sharing
 
-Cyber Chef can generate a QR code with a compact recipe summary:
+MiseDeck can generate a QR code with a compact recipe summary:
 
 ```text
 Recipe > Actions > Share
@@ -121,8 +121,8 @@ See [docs/INSTALL.md](docs/INSTALL.md) for flashing instructions.
 
 ## Release binaries
 
-- English: `releases/v1.0.0/CyberChef_Cardputer_v1.0.0_EN.bin`
-- Portuguese/Brazilian: `releases/v1.1.0-PTBR/CyberChef_Cardputer_v1.1_PT-BR.bin`
+- English: `releases/v1.0.0/MiseDeck_Cardputer_v1.0.0_EN.bin`
+- Portuguese/Brazilian: `releases/v1.1.0-PTBR/MiseDeck_Cardputer_v1.1_PT-BR.bin`
 
 ## Documentation
 
@@ -133,5 +133,6 @@ See [docs/INSTALL.md](docs/INSTALL.md) for flashing instructions.
 - [Release checklist](docs/RELEASE_CHECKLIST.md)
 - [Portuguese README](README.pt-BR.md)
 
+## License
 
-Cyber Chef is released under the [MIT License](LICENSE).
+MiseDeck is released under the [MIT License](LICENSE).

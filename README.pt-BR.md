@@ -1,12 +1,12 @@
-# Cyber Chef
+# MiseDeck
 
-**Um firmware com vibe de cyberdeck culinário para o M5Stack Cardputer.**
+**Um mise en place de bolso e caixa de ferramentas culinária para o M5Stack Cardputer.**
 
-O Cyber Chef transforma o M5Stack Cardputer em uma ferramenta digital compacta de cozinha para escalar receitas, gerenciar ingredientes, usar timer, compartilhar receitas offline e acessar um portal local pelo navegador.
+O MiseDeck transforma o M5Stack Cardputer em um mise en place de bolso para escalar receitas, gerenciar ingredientes, usar timer, compartilhar receitas offline e acessar um portal local pelo navegador.
 
 > *"nós somos os músicos e somos os sonhadores de sonhos"*
 
-O Cyber Chef foi idealizado por **André Fuentes** / **@anfuentz** e vibecodeado com **Codex**.
+O MiseDeck foi idealizado por **André Fuentes** / **@anfuentz** e vibecodeado com **Codex**.
 
 ## Status
 
@@ -25,7 +25,7 @@ Uma build em português brasileiro também está disponível como **v1.1 PT-BR**
 - Inclui modo rápido para cálculos proporcionais
 - Inclui timer, conversor, tela de bateria e controle de som/volume
 - Conecta ao Wi-Fi pelo próprio Cardputer
-- Cria um portal local em `cyberchef.local` ou pelo IP do aparelho
+- Cria um portal local em `misedeck.local` ou pelo IP do aparelho
 - Tem interface responsiva para celular
 - Permite editar, salvar e baixar arquivos TXT de receita pelo navegador
 - Compartilha receitas offline por QR Code
@@ -62,7 +62,7 @@ Durante edição de texto ou número:
 
 Depois de conectar o Cardputer ao Wi-Fi:
 
-1. Abra `http://cyberchef.local` no navegador, ou use o IP mostrado no Cardputer.
+1. Abra `http://misedeck.local` no navegador, ou use o IP mostrado no Cardputer.
 2. Navegue pelas receitas por categoria ou pela aba Todas.
 3. Abra uma receita para visualizar, recalcular proporção, editar TXT, salvar ou baixar.
 
@@ -92,7 +92,7 @@ Receitas compostas usam blocos `[PREPARO]`.
 
 ## Compartilhamento offline
 
-O Cyber Chef gera um QR Code com um resumo compacto da receita:
+O MiseDeck gera um QR Code com um resumo compacto da receita:
 
 ```text
 Receita > Ações > Compartilhar
@@ -121,8 +121,8 @@ Veja [docs/INSTALL.md](docs/INSTALL.md) para instruções de gravação.
 
 ## Binários da release
 
-- Inglês: `releases/v1.0.0/CyberChef_Cardputer_v1.0.0_EN.bin`
-- Português/Brasil: `releases/v1.1.0-PTBR/CyberChef_Cardputer_v1.1_PT-BR.bin`
+- Inglês: `releases/v1.0.0/MiseDeck_Cardputer_v1.0.0_EN.bin`
+- Português/Brasil: `releases/v1.1.0-PTBR/MiseDeck_Cardputer_v1.1_PT-BR.bin`
 
 ## Documentação
 
@@ -135,4 +135,4 @@ Veja [docs/INSTALL.md](docs/INSTALL.md) para instruções de gravação.
 
 ## Licença
 
-Cyber Chef é distribuído sob a [licença MIT](LICENSE).
+MiseDeck é distribuído sob a [licença MIT](LICENSE).
