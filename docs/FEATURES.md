@@ -109,11 +109,3 @@ TOTAL:1300.0g
 INGREDIENT 1 100.0g-INGREDIENT 2 200.0g
 ```
 
-## About screen and easter egg
-
-The About screen credits:
-
-- André Fuentes / @anfuentz — concept and project direction
-- Codex — vibecoding collaborator
-
-The hidden sequence unlocks a translated and metric-converted Portal cake recipe.
