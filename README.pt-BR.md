@@ -60,23 +60,17 @@ Navegue pelas receitas por categoria, abra receitas, baixe TXT, crie novas recei
 
 ![Portal desktop do Mise_Deck](media/screenshots/portal/portal_desktop_overview.png)
 
-### Biblioteca no celular
+### Criar e editar receitas no portal
 
-No celular, o portal usa ações empilhadas, abas horizontais por categoria e botões maiores para toque.
+Crie e atualize receitas diretamente no navegador usando campos claros para nome, categoria, peso total, ingredientes e proporções.
 
-![Portal mobile do Mise_Deck](media/screenshots/portal/portal_mobile_home.png)
-
-### Editor guiado
-
-Crie e edite receitas por campos guiados, sem precisar mexer diretamente no TXT. Os dados são normalizados em caixa alta para manter consistência.
-
-![Editor mobile de receita do Mise_Deck](media/screenshots/portal/portal_mobile_editor.png)
+![Editor de receita do Mise_Deck no navegador](media/screenshots/portal/portal_desktop_editor.png)
 
 ### Backup
 
 O menu de backup oferece exportação da biblioteca em TXT ou receitas individuais em um arquivo ZIP.
 
-![Menu de backup do Mise_Deck](media/screenshots/portal/portal_mobile_backup.png)
+![Menu de backup do Mise_Deck](media/screenshots/portal/portal_desktop_backup.png)
 
 ## Destaques
 

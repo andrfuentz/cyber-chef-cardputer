@@ -60,23 +60,17 @@ Browse recipes by category, open recipes, download TXT files, create new recipes
 
 ![Mise_Deck desktop browser portal](media/screenshots/portal/portal_desktop_overview.png)
 
-### Mobile recipe library
+### Create and edit recipes in the portal
 
-The portal layout adapts to phones with stacked actions, horizontal category tabs, and larger touch targets.
+Create and update recipes directly in the browser using clear fields for name, category, total weight, ingredients, and proportions.
 
-![Mise_Deck mobile browser portal](media/screenshots/portal/portal_mobile_home.png)
-
-### Guided browser editor
-
-Create and edit recipes through guided fields instead of raw text. Inputs normalize recipe data to uppercase for consistency.
-
-![Mise_Deck mobile recipe editor](media/screenshots/portal/portal_mobile_editor.png)
+![Mise_Deck browser recipe editor](media/screenshots/portal/portal_desktop_editor.png)
 
 ### Backup export
 
 The backup menu offers full-library TXT export or individual recipe TXT files packed into a ZIP.
 
-![Mise_Deck browser backup menu](media/screenshots/portal/portal_mobile_backup.png)
+![Mise_Deck browser backup menu](media/screenshots/portal/portal_desktop_backup.png)
 
 ## Highlights
 
@@ -90,7 +84,6 @@ The backup menu offers full-library TXT export or individual recipe TXT files pa
 - Includes timer, unit converter, battery view, and sound/volume controls
 - Connects to Wi-Fi from the Cardputer
 - Serves a local browser portal at `misedeck.local` or the device IP
-- Provides a mobile-friendly browser interface
 - Lets you edit, save, delete, and download recipe TXT files
 - Provides TXT and ZIP backup options through the browser portal
 - Shares recipes offline through a local Cardputer-hosted page
