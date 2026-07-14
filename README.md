@@ -1,4 +1,4 @@
-﻿# Mise_Deck
+# Mise_Deck
 
 **A pocket mise en place and kitchen utility firmware for the M5Stack Cardputer.**
 
@@ -6,13 +6,23 @@ Mise_Deck turns the M5Stack Cardputer into a pocket mise en place for recipe sca
 
 > *"we are the music makers and we are the dreamers of dreams"*
 
-Mise_Deck was idealized by **AndrÃ© Fuentes** / **@anfuentz** and vibecoded with **Codex**.
+Mise_Deck was idealized by **André Fuentes** / **@anfuentz** and vibecoded with **Codex**.
 
 ## Status
 
 Current public release: **v1.5.0**
 
 English and Portuguese/Brazilian firmware builds are provided.
+
+## Preview
+
+### Cardputer UI
+
+![Mise_Deck Cardputer UI preview](media/screenshots/mise_deck_v1.5_cardputer_preview.png)
+
+### Browser portal
+
+![Mise_Deck browser portal preview](media/screenshots/mise_deck_v1.5_portal_preview.png)
 
 ## What it does
 
@@ -27,8 +37,9 @@ English and Portuguese/Brazilian firmware builds are provided.
 - Connects to Wi-Fi from the Cardputer
 - Serves a local browser portal at `misedeck.local` or the device IP
 - Provides a mobile-friendly browser interface
-- Lets you edit, save, and download recipe TXT files
-- Shares compact recipe summaries through offline QR codes
+- Lets you edit, save, delete, and download recipe TXT files
+- Provides TXT and ZIP backup options through the browser portal
+- Shares recipes offline through a local Cardputer-hosted page
 
 ## Hardware
 
@@ -43,20 +54,20 @@ The firmware uses the ESP32-S3 / StampS3 target used by the Cardputer.
 
 Common controls:
 
-- `;` â€” up
-- `.` â€” down
-- `,` â€” left / previous
-- `/` â€” right / next
-- `OK` / `Enter` â€” confirm
-- `` ` `` / `Esc` â€” back / cancel
-- `Del` â€” delete character
-- `Tab` â€” favorite/unfavorite recipe
+- `;` - up
+- `.` - down
+- `,` - left / previous
+- `/` - right / next
+- `OK` / `Enter` - confirm
+- `` ` `` / `Esc` - back / cancel
+- `Del` - delete character
+- `Tab` - favorite/unfavorite recipe
 
 During text or number editing:
 
-- `,` â€” move cursor left
-- `/` â€” move cursor right
-- `Del` â€” delete before cursor
+- `,` - move cursor left
+- `/` - move cursor right
+- `Del` - delete before cursor
 
 ## Local browser portal
 
@@ -64,7 +75,7 @@ After connecting the Cardputer to Wi-Fi:
 
 1. Open `http://misedeck.local` in a browser, or use the IP shown on the Cardputer.
 2. Browse recipes by category or the All tab.
-3. Open a recipe to view, scale, edit TXT, save changes, or download it.
+3. Open a recipe to view, scale, edit, save changes, delete, or download it.
 
 The portal runs directly from the Cardputer on your local network. It is not a cloud service and does not require an account.
 
@@ -92,7 +103,7 @@ Composite recipes use `[PREP]` blocks.
 
 ## Offline sharing
 
-Mise_Deck can generate an offline sharing QR code:
+Mise_Deck can start an offline recipe sharing flow:
 
 ```text
 Recipe > Actions > Share
@@ -136,5 +147,3 @@ See [docs/INSTALL.md](docs/INSTALL.md) for flashing instructions.
 ## License
 
 Mise_Deck is released under the [MIT License](LICENSE).
-
-
