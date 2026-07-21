@@ -38,14 +38,14 @@ Use FAT32.
 Mise_Deck creates/uses:
 
 ```text
-/RECEITAS/
-/IMPORTAR/
+/RECIPES/
+/IMPORT/
 /MISE_DECK_BACKUP.txt
 ```
 
 To import TXT recipes manually:
 
-1. Put `.txt` recipe files inside `/IMPORTAR/`.
+1. Put `.txt` recipe files inside `/IMPORT/`.
 2. On the Cardputer, open `System > Import SD`.
 
 ## First boot

@@ -1,0 +1,34 @@
+.pio/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# PlatformIO / Arduino build outputs
+*.elf
+*.map
+*.hex
+*.bin
+*.uf2
+
+# Keep official release binaries only when intentionally placed there
+!releases/**/*.bin
+!firmware/**/*.bin
+
+# Local/editor noise
+*.log
+*.tmp
+*.bak
+
+# Secrets / local config
+secrets.*
+wifi.*
+*.local
+
+# Private/local recipe collections
+Receitas Evernote*/
+Receitas_Evernote_*.txt
+src/evernote_recipes_ptbr.h
+
+# Superseded v1.5 source copies; v1.6 uses src/main.cpp only
+CyberChef_Cardputer_v11.ino
+variants/

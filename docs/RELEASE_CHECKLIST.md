@@ -1,35 +1,33 @@
-﻿# v1.5.0 release checklist
+# v1.6.0 release checklist
 
 ## Firmware
 
-- [x] Align English and PT-BR builds under `v1.5.0`
-- [x] Change `FW_VERSION` to `v1.5.0`
-- [x] Compile final firmware
-- [ ] Flash and test on real Cardputer
-- [x] Test SD recipe save/load
-- [ ] Test Wi-Fi connection
-- [ ] Test browser portal on desktop
-- [x] Test browser portal on phone
-- [x] Test QR offline sharing
-- [x] Export final `.bin`
+- [x] Consolidate English and PT-BR into one firmware
+- [x] Set firmware version to `v1.6.0`
+- [x] Add persistent language selection
+- [x] Add eight selectable color themes
+- [x] Add long-name scrolling
+- [x] Add double-buffered rendering
+- [x] Compile the final firmware
+- [x] Flash and test on a real Cardputer
+- [x] Test both languages
+- [x] Test color selection and persistence
+- [x] Test SD recipe loading and compatibility
+- [x] Test Wi-Fi portal and offline sharing
+- [x] Export the final `.bin`
 
 ## Repository
 
-- [x] Choose license: MIT
-- [x] Add final `LICENSE`
-- [x] Review README English
-- [x] Review README Portuguese
-- [ ] Add screenshots
-- [ ] Add photos
-- [ ] Add demo video link
-- [ ] Remove old/private/local artifacts if needed
-- [x] Add release notes
+- [x] Use `src/main.cpp` as the only active firmware source
+- [x] Exclude personal recipe collections and local backups
+- [x] Update English and Portuguese READMEs
+- [x] Update feature, portal, and installation documentation
+- [x] Add v1.6.0 release notes
+- [ ] Update GitHub repository files
+- [ ] Create tag `v1.6.0`
+- [ ] Publish the GitHub release
 
-## Suggested repository cleanup
-
-Before publishing, keep only the clean project files and release assets.
-
-Recommended public structure:
+## Public release structure
 
 ```text
 README.md
@@ -37,26 +35,9 @@ README.pt-BR.md
 CHANGELOG.md
 LICENSE
 platformio.ini
-Mise_Deck_Cardputer_v11.ino
-chef_splash.h
 assets/
 src/
 docs/
 media/
-releases/
+releases/v1.6.0/
 ```
-
-Avoid publishing:
-
-- old temporary zips;
-- local build cache;
-- `.pio/`;
-- random work/prototype folders;
-- serial logs;
-- personal Wi-Fi credentials.
-
-## License decision
-
-Mise_Deck uses the MIT License.
-
-

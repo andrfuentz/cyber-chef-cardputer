@@ -1,103 +1,34 @@
-﻿# Changelog
+# Changelog
 
-## v1.1 PT-BR â€” Portuguese/Brazilian build
+## v1.6.0
 
-- Rebuilt the PT-BR firmware from the last stable Portuguese development version
-- Restored the original Portuguese recipe workflow
-- Added the final opening animation and celesta/music-box motif
-- Added the translated About quote
-- Kept `FOCACCIA DO ANDRE` as the clean example recipe
-- Fixed the Portal cake easter egg recipe in Portuguese
+- Consolidated English and Portuguese/Brazilian into one firmware
+- Added language selection with persistent preference
+- Added eight selectable interface color themes
+- Added long-name scrolling for recipes, preparations, and ingredients
+- Added double-buffered rendering for smoother menus and animations
+- Unified internal categories while keeping older PT-BR and English TXT files compatible
+- Improved browser portal translations and guided recipe totals
+- Increased supported recipe and ingredient names from 22 to 64 characters
+- Improved navigation consistency and removed legacy control conflicts
+- Added transactional recipe saves and safer portal editing/deletion
+- General stability, UI, and consistency fixes
 
-## v1.0.0 EN â€” public release candidate
+## v1.5.0
 
-Public release candidate promoted from the validated development firmware.
+- Added a mobile-friendly browser portal layout
+- Improved recipe creation and editing in the portal
+- Added TXT and ZIP backup options
+- Improved offline recipe sharing
+- Improved recipe overview on the Cardputer
+- Aligned English and Portuguese/Brazilian builds
+- General UI polish and bug fixes
 
-### Included
+## v1.0.0
 
-- Recipe library on microSD
+- First public English release
+- Recipe library stored on microSD
 - Simple and composite recipes
 - Category browsing and favorites
-- Weight-based recipe scaling
-- Ingredient editing
-- Quick scaling mode
-- Timer and converter
-- Battery indicator
-- Sound and volume controls
-- Wi-Fi setup
-- Local browser portal
-- Mobile-friendly portal layout
-- TXT recipe editor
-- Offline QR sharing
-- About screen
-- Hidden Portal cake recipe easter egg
-- Short celesta/music-box style opening motif
-- New About quote inspired by *Willy Wonka & the Chocolate Factory*
-
-## v1.9k â€” development build
-
-- Removed visible placeholder tools for scale and thermometer from the Tools menu
-- Replaced demo seed recipes with a single personal focaccia example recipe
-
-## v1.9j â€” development build
-
-- Added About screen
-- Added AndrÃ© Fuentes / @anfuentz credit
-- Added Codex vibecoding credit
-- Added hidden Portal cake recipe unlock
-- Added translated and metric-converted Portal cake recipe
-
-## v1.9i â€” development build
-
-- Improved mobile browser portal layout
-- Larger buttons and recipe text on phones
-- Full-screen mobile recipe modal
-- Better mobile editor layout
-
-## v1.9h â€” development build
-
-- Simplified offline QR payload
-- Centered QR display
-- Cleaner QR screen
-
-## v1.9g â€” development build
-
-- Added offline QR recipe sharing
-
-## v1.9f â€” development build
-
-- Refined boot screen
-- Music now plays with the typewriter animation
-- Removed boot frame
-- Minimal `OK ENTRA` hint
-
-## v1.9e â€” development build
-
-- Added single-screen animated boot intro
-- Added bistro-inspired boot jingle
-
-## v1.9d â€” development build
-
-- Simplified TXT recipe format
-- Portal editor accepts simplified TXT
-
-## v1.9c â€” development build
-
-- Added portal "All" tab
-- Improved recipe modal layout
-- Moved proportion scaling and TXT tools lower in the modal
-
-## v1.9b â€” development build
-
-- Added cursor editing for text/number fields
-- Fixed recipe creation text carry-over
-- Improved confirmation navigation
-- Reordered timer menu
-
-## v1.9 â€” development build
-
-- Added sound system improvements
-- Added volume menu
-- Added timer melody
-- Added interaction beeps
-
+- Weight-based scaling and ingredient editing
+- Timer, converter, battery, sound, Wi-Fi portal, and offline sharing
