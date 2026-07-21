@@ -10,7 +10,7 @@ Mise_Deck was idealized by **André Fuentes** / **@anfuentz** and vibecoded with
 
 ## Current release
 
-**v1.5.0** - English and Portuguese/Brazilian firmware builds are provided.
+**v1.6.0** - One unified firmware with English and Portuguese/Brazilian selectable from the System menu.
 
 ## Interface preview
 
@@ -87,6 +87,10 @@ The backup menu offers full-library TXT export or individual recipe TXT files pa
 - Lets you edit, save, delete, and download recipe TXT files
 - Provides TXT and ZIP backup options through the browser portal
 - Shares recipes offline through a local Cardputer-hosted page
+- Switches between English and Portuguese/Brazilian without changing firmware
+- Includes eight selectable interface color themes
+- Scrolls long recipe and ingredient names for easier reading
+- Uses double-buffered rendering for smoother menus and animations
 
 ## Hardware
 
@@ -167,10 +171,9 @@ Validated with:
 
 See [docs/INSTALL.md](docs/INSTALL.md) for flashing instructions.
 
-## Release binaries
+## Release binary
 
-- English: `releases/v1.5.0/Mise_Deck_Cardputer_v1.5.0_EN.bin`
-- Portuguese/Brazilian: `releases/v1.5.0/Mise_Deck_Cardputer_v1.5.0_PT-BR.bin`
+- Unified English + Portuguese/Brazilian: `releases/v1.6.0/Mise_Deck_Cardputer_v1.6.0.bin`
 
 ## Documentation
 

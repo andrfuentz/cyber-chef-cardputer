@@ -2,6 +2,14 @@
 
 Mise_Deck is designed as a compact kitchen utility firmware for the M5Stack Cardputer.
 
+## Language and appearance
+
+- One firmware with English and Portuguese/Brazilian
+- Language preference saved between restarts
+- Eight selectable terminal-style color themes
+- Smooth double-buffered screen rendering
+- Automatic scrolling for long recipe, preparation, and ingredient names
+
 ## Recipe library
 
 - Store recipes on microSD
@@ -92,6 +100,7 @@ Portal features:
 - Create new simple/composite recipe
 - Download TXT
 - Download backup
+- Download all recipes as individual TXT files in a ZIP archive
 
 ## Offline sharing
 
